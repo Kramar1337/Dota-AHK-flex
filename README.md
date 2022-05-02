@@ -8,6 +8,12 @@ __Микро скрипт для Dota 2__
  - Прошивка "win64\engine2.dll" (sv_cheats)
  - Прошивка "win64\client.dll" (gameinfo.gi, DOTA+)
 
+<summary>Подробное описание</summary>
+
+Будет позже
+
+</details>
+
 :memo:__Как запустить:__:memo:
 
 1. Скачать и установить [Autohotkey.com](https://www.autohotkey.com/download/ahk-install.exe)
@@ -34,3 +40,7 @@ __🔗Собрано из следующих материалов:🔗__
 | [Github](https://github.com/skrixx68/Dota2-Overlay-2.0) | Dota2-Overlay-2.0 | Visible by Enemy |
 | [Github](https://github.com/Wolf49406/Dota2Patcher) | Dota2Patcher | Patch client.dll(gameinfo.gi, DOTA+) |
 | [Github](https://github.com/boscutti939/damods) | Dota 2 Mods | Dota 2 Sound Mods (memes) |
+
+🙏 Использовать на свой страх и риск 🙏
+
+🙈 Завтра VAC 🙉
