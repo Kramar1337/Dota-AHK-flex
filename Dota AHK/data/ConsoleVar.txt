@@ -1,0 +1,10 @@
+sv_cheats 1
+dota_use_particle_fow 0
+fog_enable 0
+fow_client_nofiltering 1
+dota_camera_distance 1400
+r_farz 18000
+fog_override_enable 1
+dota_range_display 2500
+cl_dota_unified_tree_hitboxes 0
+cl_weather 0

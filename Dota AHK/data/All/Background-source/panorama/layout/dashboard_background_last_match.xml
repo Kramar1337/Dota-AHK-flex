@@ -1,0 +1,14 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/dashboard_background_last_match.vcss_c" />
+	</styles>
+	<DOTADashboardBackgroundLastMatch>
+		<Image src="file://{images}/backgrounds/custom_background.png" />
+		<DOTAScenePanel id="BackgroundScene" camera="versus_camera" light="versus_light" deferredalpha="false" renderdeferred="true" particleonly="false" />
+		<Panel id="BGVignette" hittest="false" />
+		<Panel id="DetailsContainer" />
+		<Panel id="MissingDataContainer" />
+	</DOTADashboardBackgroundLastMatch>
+</root>
