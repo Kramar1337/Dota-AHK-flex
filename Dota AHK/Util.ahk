@@ -217,34 +217,28 @@
 
 
 
-https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/402262-dota-2-visible-enemy-overlay.html
-https://github.com/skrixx68/Dota2-Overlay-2.0
-https://github.com/Wolf49406/Dota2Patcher
-https://github.com/boscutti939/damods
+__🔗Собрано из следующих материалов:🔗__
+| Ссылка | Название | Описание |
+| --- | --- | --- |
+| [UC](https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/402262-dota-2-visible-enemy-overlay.html) | Dota 2 Visible by Enemy Overlay | Visible by Enemy |
+| [Github](https://github.com/skrixx68/Dota2-Overlay-2.0) | Dota2-Overlay-2.0 | Visible by Enemy |
+| [Github](https://github.com/Wolf49406/Dota2Patcher) | Dota2Patcher | Patch client.dll(gameinfo.gi, DOTA+) |
+| [Github](https://github.com/boscutti939/damods) | Dota 2 Mods | Dota 2 Sound Mods (memes) |
 
 
 
 Запланировано:
 автообновлятор с гитхаба
-трей меню
-дополнить описание
-
-
-
-
-
 
 
 
 Микро скрипт для Dota2 "Dota AHK Flex"
- + Visible by Enemy (VBE)
- + Локатор сентрей
- + Установщик VPK
- + Тыквы, мегаубийства, цветная речка, Auto Accept
- + Прошивка "win64\engine2.dll" (sv_cheats)
- + Прошивка "win64\client.dll" (gameinfo.gi, DOTA+)
-
-
+ - Visible by Enemy (VBE)
+ - Локатор сентрей
+ - Установщик VPK
+ - Тыквы, мегаубийства, цветная речка, Auto Accept
+ - Прошивка "win64\engine2.dll" (sv_cheats)
+ - Прошивка "win64\client.dll" (gameinfo.gi, DOTA+)
 
 
 
@@ -259,18 +253,6 @@ Home - Reload
 sv_cheats 1; dota_use_particle_fow 0; fog_enable 0; fow_client_nofiltering 1; dota_camera_distance 1400; r_farz 3000; dota_range_display 2500; cl_dota_unified_tree_hitboxes 0;
 
 bind 9 "dota_camera_distance 1400"; bind 0 "dota_camera_distance 4000"; bind 8 "dota_range_display 0"
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -354,10 +336,6 @@ cl_dota_showents			Выгрузить список сущностей в кон�
 ; Заменить на
 ; 8B 48 70 85 C9 0F 85 A2 00 00 00 48
 ===========================================
-
-
-
-
 
 
 
