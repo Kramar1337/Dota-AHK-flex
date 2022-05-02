@@ -8,6 +8,7 @@ __Микро скрипт для Dota 2__
  - Прошивка "win64\engine2.dll" (sv_cheats)
  - Прошивка "win64\client.dll" (gameinfo.gi, DOTA+)
 
+<details>
 <summary>Подробное описание</summary>
 
 Будет позже
