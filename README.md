@@ -1,6 +1,6 @@
 # Dota AHK Flex v0.5
  
-Микро скрипт для Dota2
+__Микро скрипт для Dota 2__
  - Visible by Enemy (VBE)
  - Локатор сентрей
  - Установщик VPK
