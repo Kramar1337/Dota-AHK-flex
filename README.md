@@ -54,8 +54,7 @@ Home - Перезагрузить
 __🔗Собрано из следующих материалов:🔗__
 | Ссылка | Название | Описание |
 | --- | --- | --- |
-| [UC](https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/402262-dota-2-visible-enemy-overlay.html) | Dota 2 Visible by Enemy Overlay | Visible by Enemy |
-| [Github](https://github.com/skrixx68/Dota2-Overlay-2.0) | Dota2-Overlay-2.0 | Visible by Enemy |
+| [UC](https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/402262-dota-2-visible-enemy-overlay.html) [Github](https://github.com/skrixx68/Dota2-Overlay-2.0) | Dota 2 Visible by Enemy Overlay | Visible by Enemy |
 | [Github](https://github.com/Wolf49406/Dota2Patcher) | Dota2Patcher | Patch client.dll(gameinfo.gi, DOTA+) |
 | [Github](https://github.com/boscutti939/damods) | Dota 2 Mods | Dota 2 Sound Mods (memes) |
 
