@@ -8,3 +8,6 @@ fog_override_enable 1
 dota_range_display 2500
 cl_dota_unified_tree_hitboxes 0
 cl_weather 0
+bind 8 "dota_range_display 0"
+bind 9 "dota_camera_distance 1400"
+bind 0 "dota_camera_distance 4000"

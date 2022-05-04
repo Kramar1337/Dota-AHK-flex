@@ -229,6 +229,13 @@ __🔗Собрано из следующих материалов:🔗__
 
 Запланировано:
 автообновлятор с гитхаба
+хеш ченжер
+нейм ченжер
+виндов ченжер
+
+
+
+
 
 
 
@@ -309,6 +316,25 @@ cl_dota_showents			Выгрузить список сущностей в кон�
 ===========================================gameinfo.gi bypass
 Вместо хекс редактирования такая жижа "dota\win64\client.dll"
 ; Регаем поиск в чит энжин
+
+
+; 39 ?? 39 ?? ?? 3D ?? ?? 3D
+; 39 EB
+
+
+искать
+; л?D89t9D8=%h=
+; EB 3F 44 38 7F 39 74 39 44 38 3D 25 68 3D 02 75
+; 9t9D8=%h=
+; 39 74 39 44 38 3D 25 68 3D 02 75
+
+
+; л?D89л9D8=%h=
+; EB 3F 44 38 7F 39 EB 39 44 38 3D 25 68 3D 02 75
+; 9л9D8=%h=
+; 39 EB 39 44 38 3D 25 68 3D 02 75
+
+
 ; л9Ђ=?G=
 ; Искать это
 ; t9Ђ=пH=
@@ -319,13 +345,13 @@ cl_dota_showents			Выгрузить список сущностей в кон�
 
 ; Новый 210250 строка
 
-; 00 ?? 39 80 3D ?? ?? 3D 02 00
+; 00 ?? 39 80 3D ?? ?? 3D 02 00 75 30 83
 ; 00 74 39 80 3D EF 48 3D 02 00 75 30 83
 ; 00 EB 39 80 3D EF 48 3D 02 00 75 30 83
 
-; Стаырый
-; 74 39 80 3D 3F 47 3D 02 00 75 30 83
-; EB 39 80 3D 3F 47 3D 02 00 75 30 83
+; Старый
+; 00 74 39 80 3D 3F 47 3D 02 00 75 30 83
+; 00 EB 39 80 3D 3F 47 3D 02 00 75 30 83
 ===========================================DOTA PLUS
 Вместо хекс редактирования такая жижа "dota\win64\client.dll"
 ; Регаем поиск в чит энжин
@@ -343,9 +369,10 @@ cl_dota_showents			Выгрузить список сущностей в кон�
 
 */
 
+AntiVACHashChanger:="fghfh3534gjdgdfgfj6867jhmbdsq4123asddfgdfgaszxxcasdf423dfght7657ghnbnghrtwer32esdfgr65475dgdgdf6867ghjkhji7456wsdfsf34sdfsdf324sdfgdfg453453453456345gdgdgdfsf"
 
 
-Versiya := "Dota AHK Flex v0.5"
+Versiya := "Dota AHK Flex v0.6"
 #SingleInstance Force
 #NoEnv
 SetWorkingDir %A_ScriptDir%
@@ -368,6 +395,51 @@ If !(A_IsAdmin || RegExMatch(CommandLine, " /restart(?!\S)")) {
     ExitApp
 }
 OnExit("ExitFunc")
+
+
+
+
+
+
+
+
+;=====================================безопасность
+IniRead, ScWinrenamer, data\data.ini, Settings, ScWinrenamer ; проверка Winrenamer
+IniRead, ScRenamer, data\data.ini, Settings, ScRenamer ; проверка Renamera
+IniRead, ScHachCh, data\data.ini, Settings, ScHachCh ; проверка ScHachCh
+
+
+If ScHachCh
+{
+FileRead, FileReadOutputVar1, %A_ScriptFullPath%
+Random, rand1488, 20, 30
+password := gen_password(rand1488)
+1RepFile1 = AntiVACHashChanger:="\w*"
+2RepFile2 = AntiVACHashChanger:="%password%%password%%password%%password%"
+RegExRepFile1 := RegExReplace(FileReadOutputVar1, 1RepFile1, 2RepFile2)
+FileEncoding UTF-8
+FileDelete, %A_ScriptFullPath%
+FileAppend, %RegExRepFile1%, %A_ScriptFullPath%
+}
+If ScRenamer
+{
+Random, rand1488, 10, 14
+password := gen_password(rand1488)										;вызов функции в переменную (длина)
+SplitPath, A_ScriptFullPath,,, 2z2ext,, 	;извлечь из строки расширение
+FileMove, %A_ScriptFullPath%, %A_ScriptDir%\%password%.%2z2ext%
+savereloadvar = %A_ScriptDir%\%password%.%2z2ext%
+}
+
+
+
+
+
+
+
+
+
+
+
 ; ====================================================================Ввод данных в консоль, начало
 Loop, read, data\ConsoleVar.txt
 {
@@ -412,13 +484,20 @@ Menu,Tray, Icon, data\icon.ico, ,1
 Menu,Tray, NoStandard
 Menu,Tray, DeleteAll
 Menu,Tray, add, Settings, MetkaMenu1
-Menu,Tray, Icon, Settings, imageres.dll,110, 16
+Menu,Tray, Icon, Settings, imageres.dll, 110, 16
 Menu,Tray, Default , Settings
+; Menu,Tray, add
 Menu,Tray, add
 Menu,Tray, add, Up offsets, MetkaMenu2
-Menu,Tray, Icon, Up offsets, shell32.dll,136, 16
+Menu,Tray, Icon, Up offsets, shell32.dll, 136, 16
+; Menu,Tray, add
+; Menu,Tray, add
+Menu,Tray, add, BKG generator, MetkaMenu3
+Menu,Tray, Icon, BKG generator, shell32.dll, 116, 16
+; Menu,Tray, add
+; Menu,Tray, add
 Menu,Tray, add, Exit, MetkaMenu0
-Menu,Tray, Icon, Exit, shell32.dll,28, 16
+Menu,Tray, Icon, Exit, shell32.dll, 28, 16
 
 ;=======================Путь к папке с игрой
 Gui, 1: Add, GroupBox, x8 y8 w184 h71, Путь к папке с игрой
@@ -451,8 +530,17 @@ Gui, 1: Add, Button, gLabelHideGui1 x304 y368 w80 h23, Hide in tray
 
 Gui, 1: Add, CheckBox, vVBEVar gVBElabelC x16 y368 w155 h23 Checked%VBEVar%, Visible by Enemy (External)
 
-Gui, 1: Show, w392 h400, %Versiya%
 
+if (ScWinrenamer = 1)
+{
+Random, rand1488, 33, 35
+password := gen_password(rand1488)	
+Gui, 1: Show, w392 h400, %password%
+}
+Else
+{
+Gui, 1: Show, w392 h400, %Versiya%
+}
 
 Gui, 1: Submit, NoHide
 SteamPath := EditDir
@@ -529,7 +617,17 @@ Else
 Width :=A_ScreenWidth, Height := A_ScreenHeight
 Gui, 2: new, +hwndguiId
 Gui, 2: -Caption +E0x80000 +LastFound +AlwaysOnTop +ToolWindow +OwnDialogs +Disabled
+
+if (ScWinrenamer = 1)
+{
+Random, rand1488, 33, 35
+password := gen_password(rand1488)	
+Gui, 2: Show, NA, %password%
+}
+Else
+{
 Gui, 2: Show, NA
+}
 WinSet,ExStyle,^0x20
 guiId+=0
 
@@ -556,9 +654,6 @@ UpdateLayeredWindow(hwnd1, hdc, 0, 0, Width, Height)
 	IniRead, Offsets228, data\offsets.ini, Settings, Offset
 	Offsets228 := StrSplit(Offsets228, A_Space)
 	
-	IniRead, Offsets322, data\offsets.ini, Settings, Offset2
-	Offsets322 := StrSplit(Offsets322, A_Space)
-
 	IniRead, aPattern, data\offsets.ini, Settings, aPattern
 	IniRead, bPattern, data\offsets.ini, Settings, bPattern
 
@@ -643,6 +738,9 @@ Toggle = 0
 }
 Return
 
+AntiVACHashChanger:="fghfh3534gjdgdfgfj6867jhmbdsq4123asddfgdfgaszxxcasdf423dfght7657ghnbnghrtwer32esdfgr65475dgdgdf6867ghjkhji7456wsdfsf34sdfsdf324sdfgdfg453453453456345gdgdgdfsf"
+
+
 
 VBElabelC:
 ; SoundBeep
@@ -661,10 +759,98 @@ Return
 
 
 
+;=======================================бекграунд генератор
+MetkaMenu3:
+; получить путь к папке доты
+Gui, 1: Submit, NoHide
+SteamPath := EditDir
+; проверка, компилятор на месте?
+IfNotExist, %SteamPath%\steamapps\common\dota 2 beta\game\bin\win64\resourcecompiler.exe
+{
+	MsgBox Не найден "resourcecompiler.exe" по пути:`n`n%SteamPath%\steamapps\common\dota 2 beta\game\bin\win64`n`nНеправильно указан путь или не установлен Dota 2 - Tools
+	Return
+}
+; Выбрать PNG файл
+SelectedFileVar1 =
+FileSelectFile, SelectedFileVar1, 3, ,PNG File, PNG File (*.png)
+if (SelectedFileVar1 = "")
+    Return
+FileCopy, %SelectedFileVar1%, %A_ScriptDir%\data\All\Background-source\panorama\images\backgrounds\custom_background.png, 1
+; Создать папку krambooba1337custom
+FileCreateDir, %SteamPath%\steamapps\common\dota 2 beta\content\dota_addons\krambooba1337custom
+FileCreateDir, %SteamPath%\steamapps\common\dota 2 beta\content\dota_addons\krambooba1337custom\panorama
+; Копировать "panorama" из папки с скриптом в папку доты
+FileCopyDir, %A_ScriptDir%\data\All\Background-source\panorama, %SteamPath%\steamapps\common\dota 2 beta\content\dota_addons\krambooba1337custom\panorama, 1
+;Компилировать файлы
+varcmd =
+(
+"%SteamPath%\steamapps\common\dota 2 beta\game\bin\win64\resourcecompiler.exe" -vpkincr -i "%SteamPath%\steamapps\common\dota 2 beta\content\dota_addons\krambooba1337custom\*.*" -f -r & Exit
+)
+RunWait, cmd /k "%varcmd%"
+;Копирование файлов из папки доты в папку скрипта
+DirVarGen1=%A_Now%
+FileCreateDir, %A_ScriptDir%\data\All\Background-sGen%DirVarGen1%
+FileCreateDir, %A_ScriptDir%\data\All\Background-sGen%DirVarGen1%\panorama
+FileCopyDir, %SteamPath%\steamapps\common\dota 2 beta\game\dota_addons\krambooba1337custom\panorama, %A_ScriptDir%\data\All\Background-sGen%DirVarGen1%\panorama, 1
+; Очистить папку импорта
+FileRemoveDir, %SteamPath%\steamapps\common\dota 2 beta\content\dota_addons\krambooba1337custom, 1
+; Очистить папку экспорта
+FileRemoveDir, %SteamPath%\steamapps\common\dota 2 beta\game\dota_addons\krambooba1337custom, 1
+MsgBox 0x1, ,Переместить в "data\pak09_dir" и упаковать в VPK?
+IfMsgBox OK, {
+; Переместить в копировать файлы в pak09_dir
+FileCopyDir, %A_ScriptDir%\data\All\Background-sGen%DirVarGen1%\panorama, %A_ScriptDir%\data\pak09_dir\panorama, 1
+; Удалить Background-sGen%DirVarGen1%
+FileRemoveDir, %A_ScriptDir%\data\All\Background-sGen%DirVarGen1%, 1
+; Упаковать в pak09_dir, +Кодировочка ютф-8 "chcp 65001"
+varcmd322 =
+(
+chcp 65001 & cd %A_ScriptDir%\data\ & vpk.exe pak09_dir & Exit
+)
+RunWait, cmd /k "%varcmd322%"
+Return
+} Else IfMsgBox Cancel, {
+Run, %A_ScriptDir%\data\All\Background-sGen%DirVarGen1%
+Return
+}
+Return
+
+
+AntiVACHashChanger:="fghfh3534gjdgdfgfj6867jhmbdsq4123asddfgdfgaszxxcasdf423dfght7657ghnbnghrtwer32esdfgr65475dgdgdf6867ghjkhji7456wsdfsf34sdfsdf324sdfgdfg453453453456345gdgdgdfsf"
+
 
 
 MetkaMenu2:
-MsgBox,,, Заглушка, 1
+	FileCreateDir, update
+	URLDownloadToFile, https://raw.githubusercontent.com/Kramar1337/Dota-AHK-flex/main/Dota`%20AHK/data/offsets.ini, update\offsets.ini
+
+	IniRead, gameDLL, update\offsets.ini, Settings, DLL
+	if !(gameDLL = "ERROR")
+IniWrite, %gameDLL%, data\offsets.ini, Settings, DLL
+	IniRead, gameAddress, update\offsets.ini, Settings, Address
+	if !(gameAddress = "ERROR")
+IniWrite, %gameAddress%, data\offsets.ini, Settings, Address
+	IniRead, Offsets228, update\offsets.ini, Settings, Offset
+	if !(Offsets228 = "ERROR")
+IniWrite, %Offsets228%, data\offsets.ini, Settings, Offset
+	IniRead, aPattern, update\offsets.ini, Settings, aPattern
+	if !(aPattern = "ERROR")
+IniWrite, %aPattern%, data\offsets.ini, Settings, aPattern
+	IniRead, bPattern, update\offsets.ini, Settings, bPattern
+	if !(bPattern = "ERROR")
+IniWrite, %bPattern%, data\offsets.ini, Settings, bPattern
+
+	FileRemoveDir, update, 1
+	MsgBox,,, DLL=%gameDLL%`nAddress=%gameAddress%`nOffset=%Offsets228%`naPattern=%aPattern%`nbPattern=%bPattern%, 2
+	
+	If ScRenamer
+	{
+	run %savereloadvar%
+	exitapp
+	return
+	}
+	
+	Reload
 Return
 
 
@@ -827,6 +1013,8 @@ Return
 
 Metkakey_LokatorKey:
 Sleep 1
+if !(VBEVar)
+Return
 Loop
 {
     GetKeyState, Space1State1, %LokatorKey%, P
@@ -843,7 +1031,8 @@ Loop
 		break
 		}
     Sleep 40
-    ValueVis1337 := 1337flex.read(baseAddress + gameAddress, "UInt", Offsets322*)
+	ValueLokatorKey := 1337flex.getAddressFromOffsets(baseAddress + gameAddress, Offsets228*)
+	ValueVis1337 := 1337flex.read(ValueLokatorKey + 0x14, "UInt")
 	
 	IfWinActive, Dota 2
 	{
@@ -1172,6 +1361,30 @@ Return
         }
         return AOBPattern
     }
+	
+;======================================================функция рандома
+gen_password(length = 8)																;начало фукции длина пароля по дефолту 8
+{																						
+	possible = abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890			;переменная с символами
+	StringLen, max, possible															;сколько символов в переменной
+	if length > %max%																	;если длина пароля больше переменной то выйти
+	{																					
+		MsgBox, Длина должна быть меньше количества возможных символов.				
+		Exit, 40																		
+	}																					
+	Loop																				;начало петли
+	{																					
+		Random, rand, 1, max															;зарандомить от 1 до %число символов в переменной %possible%%
+		StringMid, char, possible, rand, 1												;извлеч из %possible%(наши символы), номер символа %rand%, кол-во 1, в %char%
+		IfNotInString, password, %char%													;повторился ли символ %password% и %char%
+		{																				
+			password = %password%%char%													;склеить то что было и новый символ
+			if StrLen(password) >= length												;если длина строки %password% больше или равна длине %length%
+				break																	;выйти из петли
+		}																				
+	}																					
+	return password																		;вернуть сгенерированое значение в переменную
+}
 
 
 GuiEscape:
@@ -1179,7 +1392,18 @@ GuiClose:
     ExitApp
 	
 *~$Home::
+	If ScRenamer
+	{
+	run %savereloadvar%
+	exitapp
+	return
+	}
 Reload
+Return
+
+
+AntiVACHashChanger:="fghfh3534gjdgdfgfj6867jhmbdsq4123asddfgdfgaszxxcasdf423dfght7657ghnbnghrtwer32esdfgr65475dgdgdf6867ghjkhji7456wsdfsf34sdfsdf324sdfgdfg453453453456345gdgdgdfsf"
+
 
 ;===============================================================Функция выхода из скрипта
 MetkaMenu0:
