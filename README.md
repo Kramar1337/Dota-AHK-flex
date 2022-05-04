@@ -12,15 +12,15 @@ __🚀Функционал:🚀__
   + Цветная речка
   + Мегаубийства
 - Патч "win64\engine2.dll" (sv_cheats)
-  + sv_cheats 1
-  + dota_use_particle_fow 0
-  + fog_enable 0
-  + fow_client_nofiltering 1
-  + dota_camera_distance 1400
-  + r_farz 3000
-  + dota_range_display 2500
-  + cl_dota_unified_tree_hitboxes 0
-  + cl_weather 0
+  + sv_cheats 1 - Разблокировать команды ниже
+  + dota_use_particle_fow 0 - Телепорты в тумане войны
+  + fog_enable 0 - Туман
+  + fow_client_nofiltering 1 - Сглаживание тумана
+  + dota_camera_distance 1400 - Отдалить камеру
+  + r_farz 3000 - Убрать черную херню
+  + dota_range_display 2500 - Показать ренж
+  + cl_dota_unified_tree_hitboxes 0 - Для челов играющих с модом на тыквы
+  + cl_weather 0 - Погода
 - Патч "win64\client.dll" (DOTA+, gameinfo.gi)
   + DOTA+
   + VPK mods
