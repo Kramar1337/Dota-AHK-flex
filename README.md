@@ -4,9 +4,24 @@ __Микро скрипт для Dota 2__
  - Visible by Enemy (VBE)
  - Локатор сентрей
  - Установщик VPK
- - Тыквы, мегаубийства, цветная речка, Auto Accept
- - Прошивка "win64\engine2.dll" (sv_cheats)
- - Прошивка "win64\client.dll" (gameinfo.gi, DOTA+)
+ + Auto Accept
+ + Pumpkin Trees
+ + Sound Mods (memes)
+ + Цветная речка
+ + Мегаубийства
+ - Патч "win64\engine2.dll" (sv_cheats)
+ + sv_cheats 1
+ + dota_use_particle_fow 0
+ + fog_enable 0
+ + fow_client_nofiltering 1
+ + dota_camera_distance 1400
+ + r_farz 3000
+ + dota_range_display 2500
+ + cl_dota_unified_tree_hitboxes 0
+ + cl_weather 0
+ - Патч "win64\client.dll" (DOTA+, gameinfo.gi)
+ + DOTA+
+ + VPK mods
 
 <details>
 <summary>Подробное описание</summary>
