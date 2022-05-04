@@ -1,6 +1,8 @@
-# Dota AHK Flex v0.5
+# Dota AHK Flex v0.6
 
 Ahk скрипт(экстернал чит) для доты: VBE, DOTA+, моды и тд
+
+[Подробное описание](https://github.com/Kramar1337/Dota-AHK-flex/wiki)
 
 __🚀Функционал:🚀__
 - Visible by Enemy (VBE)
@@ -24,13 +26,6 @@ __🚀Функционал:🚀__
 - Патч "win64\client.dll" (DOTA+, gameinfo.gi)
   + DOTA+
   + VPK mods
-
-<details>
-<summary>Подробное описание</summary>
-
-Будет позже
-
-</details>
 
 :memo:__Как запустить:__:memo:
 
