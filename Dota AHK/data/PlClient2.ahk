@@ -3,16 +3,19 @@
 SetWorkingDir %A_ScriptDir%
 SetBatchLines -1
 DetectHiddenWindows, On
+/*
 ; ===========================================DOTA PLUS
 ; Вместо хекс редактирования такая жижа "dota\win64\client.dll"
-; Регаем поиск в чит энжин
-; ‹HX…Й…
-; Поиск текста +Кодировочка
-; Искать масив байт
-; 8B 48 58 85 C9 0F 85 A2 00 00 00 48
-; Заменить на
-; 8B 48 70 85 C9 0F 85 A2 00 00 00 48
+inline BYTE dota_plus_pattern[] = { 0xBF, 0x00, 0x00, 0x00, 0x00, 0x8B, 0x48, 0x58, 0x85, 0xC9, 0x0F, 0x85 };
+    BYTE Replace[] = { 0x70 };
+    if (revert) {
+        Globals::dota_plus_pattern[7] = { 0x70 };
+        Replace[0] = 0x58;
+
+
+
 ; ===========================================
+*/
 #include %A_ScriptDir%\classMemory.ahk
 if (_ClassMemory.__Class != "_ClassMemory")
 ExitApp

@@ -1,219 +1,41 @@
 ﻿/*
 
+Тут oBOYi
+https://www.wallpaperflare.com/
+https://wall.alphacoders.com/
+
+
+Предварительно установить Dota SDK
+
+Изображение для редактирования
+Background-source\panorama\images\backgrounds\custom_background.png 1920-1080p
+
+Путь к компилятору
+C:\Program Files (x86)\Steam\steamapps\common\dota 2 beta\game\bin\win64\resourcecompiler.exe
+
+Импорт, сюда переместить исходник "content\dota_addons\custom"
+C:\Program Files (x86)\Steam\steamapps\common\dota 2 beta\content\dota_addons\custom
+
+Экспорт, тут готовые скомпилированые файлы "game\dota_addons\custom"
+C:\Program Files (x86)\Steam\steamapps\common\dota 2 beta\game\dota_addons\custom
+
+Текст батника
+set Compiler="C:\Program Files (x86)\Steam\steamapps\common\dota 2 beta\game\bin\win64\resourcecompiler.exe"
+set ModSrc="C:\Program Files (x86)\Steam\steamapps\common\dota 2 beta\content\dota_addons\custom\*.*"
+%Compiler% -vpkincr -i %ModSrc% -f -r
+pause
 
 
 
-<?xml version="1.0" encoding="utf-8"?>
-<CheatTable>
-  <CheatEntries>
-    <CheatEntry>
-      <ID>15</ID>
-      <Description>"Указатель"</Description>
-      <LastState Value="22" RealAddress="218DC8A0E04"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"engine2.dll"+0052A680</Address>
-      <Offsets>
-        <Offset>E04</Offset>
-        <Offset>20</Offset>
-        <Offset>428</Offset>
-        <Offset>0</Offset>
-        <Offset>170</Offset>
-        <Offset>D0</Offset>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>16</ID>
-      <Description>"Указатель"</Description>
-      <LastState Value="22" RealAddress="218DC8A0E04"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"engine2.dll"+0052A680</Address>
-      <Offsets>
-        <Offset>E04</Offset>
-        <Offset>A8</Offset>
-        <Offset>3E0</Offset>
-        <Offset>0</Offset>
-        <Offset>170</Offset>
-        <Offset>D0</Offset>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>17</ID>
-      <Description>"Указатель"</Description>
-      <LastState Value="22" RealAddress="218DC8A0E04"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"engine2.dll"+0052A680</Address>
-      <Offsets>
-        <Offset>9CC</Offset>
-        <Offset>3E8</Offset>
-        <Offset>758</Offset>
-        <Offset>0</Offset>
-        <Offset>170</Offset>
-        <Offset>D0</Offset>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>18</ID>
-      <Description>"Указатель"</Description>
-      <LastState Value="22" RealAddress="218DC8A0E04"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"engine2.dll"+0052A680</Address>
-      <Offsets>
-        <Offset>E04</Offset>
-        <Offset>198</Offset>
-        <Offset>5B0</Offset>
-        <Offset>0</Offset>
-        <Offset>170</Offset>
-        <Offset>D0</Offset>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>19</ID>
-      <Description>"Указатель"</Description>
-      <LastState Value="22" RealAddress="218DC8A0E04"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"engine2.dll"+0052A680</Address>
-      <Offsets>
-        <Offset>E04</Offset>
-        <Offset>758</Offset>
-        <Offset>0</Offset>
-        <Offset>170</Offset>
-        <Offset>D0</Offset>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>20</ID>
-      <Description>"Указатель"</Description>
-      <LastState Value="22" RealAddress="218DC8A0E04"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"engine2.dll"+0052A680</Address>
-      <Offsets>
-        <Offset>E04</Offset>
-        <Offset>2E8</Offset>
-        <Offset>758</Offset>
-        <Offset>0</Offset>
-        <Offset>170</Offset>
-        <Offset>D0</Offset>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>21</ID>
-      <Description>"Указатель"</Description>
-      <LastState Value="22" RealAddress="218DC8A0E04"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"engine2.dll"+0052A680</Address>
-      <Offsets>
-        <Offset>964</Offset>
-        <Offset>58</Offset>
-        <Offset>8C8</Offset>
-        <Offset>0</Offset>
-        <Offset>170</Offset>
-        <Offset>D0</Offset>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>22</ID>
-      <Description>"Указатель"</Description>
-      <LastState Value="22" RealAddress="218DC8A0E04"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"engine2.dll"+0052A680</Address>
-      <Offsets>
-        <Offset>E04</Offset>
-        <Offset>618</Offset>
-        <Offset>758</Offset>
-        <Offset>0</Offset>
-        <Offset>170</Offset>
-        <Offset>D0</Offset>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>23</ID>
-      <Description>"Указатель"</Description>
-      <LastState Value="22" RealAddress="218DC8A0E04"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"engine2.dll"+0052A680</Address>
-      <Offsets>
-        <Offset>964</Offset>
-        <Offset>118</Offset>
-        <Offset>210</Offset>
-        <Offset>20</Offset>
-        <Offset>170</Offset>
-        <Offset>D0</Offset>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>24</ID>
-      <Description>"Указатель"</Description>
-      <LastState Value="22" RealAddress="218DC8A0E04"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"engine2.dll"+0052A680</Address>
-      <Offsets>
-        <Offset>7F4</Offset>
-        <Offset>320</Offset>
-        <Offset>758</Offset>
-        <Offset>0</Offset>
-        <Offset>170</Offset>
-        <Offset>D0</Offset>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>25</ID>
-      <Description>"Указатель"</Description>
-      <LastState Value="22" RealAddress="218DC8A0E04"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"engine2.dll"+0052A680</Address>
-      <Offsets>
-        <Offset>E04</Offset>
-        <Offset>1B0</Offset>
-        <Offset>758</Offset>
-        <Offset>0</Offset>
-        <Offset>170</Offset>
-        <Offset>D0</Offset>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>26</ID>
-      <Description>"Указатель"</Description>
-      <LastState Value="22" RealAddress="218DC8A0E04"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"engine2.dll"+0052A680</Address>
-      <Offsets>
-        <Offset>B24</Offset>
-        <Offset>4A8</Offset>
-        <Offset>758</Offset>
-        <Offset>0</Offset>
-        <Offset>170</Offset>
-        <Offset>D0</Offset>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>27</ID>
-      <Description>"Указатель"</Description>
-      <LastState Value="22" RealAddress="218DC8A0E04"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"engine2.dll"+0052A680</Address>
-      <Offsets>
-        <Offset>1DC</Offset>
-        <Offset>0</Offset>
-        <Offset>170</Offset>
-        <Offset>D0</Offset>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-  </CheatEntries>
-</CheatTable>
 
+
+;==================================VBE CE
+engine2.dll
+00548CF0 0 30 38 98 170 0 AC0
+
+52 17 65 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 86 51 97 29 FF FF FF FF 0D 00 00 00 00 00
+0 - видно
+рандомные цифры - не видно
 
 
 
@@ -227,29 +49,14 @@ __🔗Собрано из следующих материалов:🔗__
 
 
 
-Запланировано:
-автообновлятор с гитхаба
-хеш ченжер
-нейм ченжер
-виндов ченжер
-
-
-
-
-
-
 
 Микро скрипт для Dota2 "Dota AHK Flex"
  - Visible by Enemy (VBE)
- - Локатор сентрей
  - Установщик VPK
  - Тыквы, мегаубийства, цветная речка, Auto Accept
  - Прошивка "win64\engine2.dll" (sv_cheats)
  - Прошивка "win64\client.dll" (gameinfo.gi, DOTA+)
 
-
-
-F1 - Локатор сентрей
 F8 - Сообщение в консоль
 F11 - Авто принятие игры (AHK)
 Home - Reload
@@ -263,29 +70,19 @@ bind 9 "dota_camera_distance 1400"; bind 0 "dota_camera_distance 4000"; bind 8 "
 
 
 
-
-
-
-
-
 ; тренировка не видно (22)
 ; 16 00 00 00 ?? ?? ?? ?? F? 7F 00 00 ?? ?? ?? 0? 00 00 00 00 0? 00 00 00 00 00 00 00 ?0 0? ?? ??
-; тренировка Видно
+; тренировка Видно (30)
 ; 1E 00 00 00 ?? ?? ?? ?? F? 7F 00 00 ?? ?? ?? 0? 00 00 00 00 0? 00 00 00 00 00 00 00 ?0 0? ?? ??
-; В игре Видно (14)
+; В игре Видно (14) (10 в игре новое значение)
 ; 0E 00 00 00 ?? ?? ?? ?? F? 7F 00 00 ?? ?? ?? 0? 00 00 00 00 0? 00 00 00 00 00 00 00 ?0 0? ?? ??
+; 0A 00 00 00 ?? ?? ?? ?? F? 7F 00 00 ?? ?? ?? 0? 00 00 00 00 0? 00 00 00 00 00 00 00 ?0 0? ?? ??
 ; В игре НЕВидно (6)
 ; 06 00 00 00 ?? ?? ?? ?? F? 7F 00 00 ?? ?? ?? 0? 00 00 00 00 0? 00 00 00 00 00 00 00 ?0 0? ?? ??
 ; 1. создать карту указателей
 ; 2. отсев 0x170, 0x0, 0x1E4
 ; [0x0, 0x28, 0x38, 0x98, 0x170, 0x0, 0x1F4]
 
-
-В статик памяти найти инструкцию читающую VBE и заменить код "and" на "or"
-Найти это
-76 0B 8B C8 B8 01 00 00 00 D3 E0 23 D8 39 9F ?? ?? 00 00 74 06 89 9F ?? ?? 00 00 48 8B 5C 24 30
-Заменить на это
-76 0B 8B C8 B8 01 00 00 00 D3 E0 09 C3 39 9F
 
 
 
@@ -294,77 +91,6 @@ dota_unit_show_selection_boxes 2
 cl_dota_unified_tree_hitboxes 0
 Супер пупер команда для починки хитбоксов тыкв(деревьев), вводить перед каждой игрой
 cl_dota_showents			Выгрузить список сущностей в консоль.
-
-
-
-
-
-
-Подсказки для меня:
-===========================================sv_cheats
-Вместо хекс редактирования такая жижа "win64\engine2.dll"
-; Регаем поиск в чит энжин
-; H‹ЛяP„АtTH‹
-; Поиск текста +Кодировочка
-
-; 48 8B CB FF 50 18 84 C0 74 54 48 8B
-; Искать масив байт
-; 74 54 48 8B 0D 00 00 00 00 48 8B 01 FF 90 00 00 00 00 84 C0 74 40 48 8B 0D
-
-; 48 8B CB FF 50 18 84 C0 EB 54 48 8B
-; Заменить на
-===========================================gameinfo.gi bypass
-Вместо хекс редактирования такая жижа "dota\win64\client.dll"
-; Регаем поиск в чит энжин
-
-
-; 39 ?? 39 ?? ?? 3D ?? ?? 3D
-; 39 EB
-
-
-искать
-; л?D89t9D8=%h=
-; EB 3F 44 38 7F 39 74 39 44 38 3D 25 68 3D 02 75
-; 9t9D8=%h=
-; 39 74 39 44 38 3D 25 68 3D 02 75
-
-
-; л?D89л9D8=%h=
-; EB 3F 44 38 7F 39 EB 39 44 38 3D 25 68 3D 02 75
-; 9л9D8=%h=
-; 39 EB 39 44 38 3D 25 68 3D 02 75
-
-
-; л9Ђ=?G=
-; Искать это
-; t9Ђ=пH=
-; Заменить на это
-; л9Ђ=пH=
-; Поиск текста +Кодировочка
-; Искать масив байт
-
-; Новый 210250 строка
-
-; 00 ?? 39 80 3D ?? ?? 3D 02 00 75 30 83
-; 00 74 39 80 3D EF 48 3D 02 00 75 30 83
-; 00 EB 39 80 3D EF 48 3D 02 00 75 30 83
-
-; Старый
-; 00 74 39 80 3D 3F 47 3D 02 00 75 30 83
-; 00 EB 39 80 3D 3F 47 3D 02 00 75 30 83
-===========================================DOTA PLUS
-Вместо хекс редактирования такая жижа "dota\win64\client.dll"
-; Регаем поиск в чит энжин
-; ‹HX…Й…
-; Поиск текста +Кодировочка
-; Искать масив байт
-; 8B 48 58 85 C9 0F 85 A2 00 00 00 48
-; Заменить на
-; 8B 48 70 85 C9 0F 85 A2 00 00 00 48
-===========================================
-
-
-
 
 
 */
@@ -644,7 +370,6 @@ UpdateLayeredWindow(hwnd1, hdc, 0, 0, Width, Height)
 
 
 ;переменные для редактирования памяти
-	Tumbler = 1
 	gameEXE:="ahk_exe dota2.exe"
 	; gameDLL:="engine2.dll"
 	; gameAddress:= "0x0052A680"
@@ -653,16 +378,6 @@ UpdateLayeredWindow(hwnd1, hdc, 0, 0, Width, Height)
 	IniRead, gameAddress, data\offsets.ini, Settings, Address
 	IniRead, Offsets228, data\offsets.ini, Settings, Offset
 	Offsets228 := StrSplit(Offsets228, A_Space)
-	
-	IniRead, aPattern, data\offsets.ini, Settings, aPattern
-	IniRead, bPattern, data\offsets.ini, Settings, bPattern
-
-	aPattern := hexStringToPattern(aPattern)
-	bPattern := hexStringToPattern(bPattern)
-
-	;============Кол-во аур
-	IniRead, LokatorKey, data\data.ini, Settings, LokatorKey
-	Hotkey, *~%LokatorKey%, Metkakey_LokatorKey, on
 	
 	;============Авто принятие игры (AHK)
 	IniRead, AseptarKey, data\data.ini, Settings, AseptarKey
@@ -696,40 +411,15 @@ While(Toggle)
 		UpdateLayeredWindow(hwnd1, hdc, 0, 0, Width, Height)
 		Goto StartLabelStart
 	}
-	
-	if Tumbler
+
+	if ValueVis1337 > 0
 	{
-		address := 1337flex.modulePatternScan("client.dll", aPattern*)
-		if address
-		{
-		statuswr := 1337flex.writeBytes(address, bPattern)
-		1337flex.write(baseAddress + gameAddress, "0", "UInt", Offsets228*)
-		Tooltip, Найден и Status = %statuswr%, 0, 0
-		sleep 300
-		Tooltip
-		}
-		Else
-		{
-		Tooltip, Патерн устарел или скрипт сломался, 0, 0
-		sleep 300
-		Tooltip
-		}
-	Tumbler = 0
+		Gosub goGreen1
 	}
-	
-	
-	if (ValueVis1337) == 6
-	Gosub goGreen1
-	if (ValueVis1337) == 10
-	Gosub goGreen1
-	if (ValueVis1337) == 22
-	Gosub goGreen1
-	if (ValueVis1337) == 14
-	Gosub goRed1
-	if (ValueVis1337) == 30
-	Gosub goRed1
-	if (ValueVis1337) == 0
-	Gosub goGreen1
+	Else
+	{
+		Gosub goRed1
+	}
 	
 Gui, 1: Submit, NoHide
 if !(VBEVar)
@@ -743,7 +433,6 @@ AntiVACHashChanger:="fghfh3534gjdgdfgfj6867jhmbdsq4123asddfgdfgaszxxcasdf423dfgh
 
 
 VBElabelC:
-; SoundBeep
 Gui, 1: Submit, NoHide
 if VBEVar
 {
@@ -820,6 +509,9 @@ AntiVACHashChanger:="fghfh3534gjdgdfgfj6867jhmbdsq4123asddfgdfgaszxxcasdf423dfgh
 
 
 
+
+
+;============================================обновлятор
 MetkaMenu2:
 	FileCreateDir, update
 	URLDownloadToFile, https://raw.githubusercontent.com/Kramar1337/Dota-AHK-flex/main/Dota`%20AHK/data/offsets.ini, update\offsets.ini
@@ -833,15 +525,10 @@ IniWrite, %gameAddress%, data\offsets.ini, Settings, Address
 	IniRead, Offsets228, update\offsets.ini, Settings, Offset
 	if !(Offsets228 = "ERROR")
 IniWrite, %Offsets228%, data\offsets.ini, Settings, Offset
-	IniRead, aPattern, update\offsets.ini, Settings, aPattern
-	if !(aPattern = "ERROR")
-IniWrite, %aPattern%, data\offsets.ini, Settings, aPattern
-	IniRead, bPattern, update\offsets.ini, Settings, bPattern
-	if !(bPattern = "ERROR")
-IniWrite, %bPattern%, data\offsets.ini, Settings, bPattern
+
 
 	FileRemoveDir, update, 1
-	MsgBox,,, DLL=%gameDLL%`nAddress=%gameAddress%`nOffset=%Offsets228%`naPattern=%aPattern%`nbPattern=%bPattern%, 2
+	MsgBox,,, DLL=%gameDLL%`nAddress=%gameAddress%`nOffset=%Offsets228%, 2
 	
 	If ScRenamer
 	{
@@ -1011,43 +698,6 @@ Return
 
 
 
-Metkakey_LokatorKey:
-Sleep 1
-if !(VBEVar)
-Return
-Loop
-{
-    GetKeyState, Space1State1, %LokatorKey%, P
-    If Space1State1 = U
-		{
-		Gdip_GraphicsClear(G) 	;очистить
-		UpdateLayeredWindow(hwnd1, hdc, 0, 0, Width, Height)
-        break
-		}
-	IfWinNotActive, Dota 2
-		{
-		Gdip_GraphicsClear(G) 	;очистить
-		UpdateLayeredWindow(hwnd1, hdc, 0, 0, Width, Height)
-		break
-		}
-    Sleep 40
-	ValueLokatorKey := 1337flex.getAddressFromOffsets(baseAddress + gameAddress, Offsets228*)
-	ValueVis1337 := 1337flex.read(ValueLokatorKey + 0x14, "UInt")
-	
-	IfWinActive, Dota 2
-	{
-	Gdip_GraphicsClear(G) 	;очистить
-	Font = Arial
-	Options = x0p y5p Centre cbbff0000 r3 s55 Bold
-	Gdip_TextToGraphics(G, ValueVis1337, Options, Font, Width, Height)
-	UpdateLayeredWindow(hwnd1, hdc, 0, 0, Width, Height)
-	}
-}
-return
-
-
-
-
 ;===============================================================VBE
 goGreen1:
 IfWinActive, Dota 2
@@ -1091,8 +741,8 @@ Return
 ;===============================================================Отправить сообщение
 Metkakey_ConsoleSayAhk:
 	Sleep 1
-	; IfWinNotActive, Dota 2
-	; Return
+	IfWinNotActive, Dota 2
+	Return
 	Gui, 1: Submit, NoHide
 	loop, parse, EditConsole1Var, `n, `r
 	{
@@ -1187,9 +837,6 @@ IfWinExist AHK_exe dota2.exe
 	Return
 }
 FileDelete, %SteamPath%\steamapps\common\dota 2 beta\game\dota_russian\pak09_dir.vpk
-
-
-
 
 Gui, 1: Submit, NoHide
 SteamPath := EditDir 	;переподать путь
@@ -1339,28 +986,7 @@ If (ONregreadDir == 0) ; Если в конфиге путь к игре рее�
 }
 Return
 
-    hexStringToPattern(hexString)
-    {
-        AOBPattern := []
-        hexString := RegExReplace(hexString, "(\s|0x)")
-        StringReplace, hexString, hexString, ?, ?, UseErrorLevel
-        wildCardCount := ErrorLevel
 
-        if !length := StrLen(hexString)
-            return -1 ; no str
-        else if RegExMatch(hexString, "[^0-9a-fA-F?]")
-            return -2 ; non hex character and not a wild card
-        else if Mod(wildCardCount, 2)
-            return -3 ; non-even wild card character count
-        else if Mod(length, 2)
-            return -4 ; non-even character count
-        loop, % length/2
-        {
-            value := "0x" SubStr(hexString, 1 + 2 * (A_index-1), 2)
-            AOBPattern.Insert(value + 0 = "" ? "?" : value)
-        }
-        return AOBPattern
-    }
 	
 ;======================================================функция рандома
 gen_password(length = 8)																;начало фукции длина пароля по дефолту 8

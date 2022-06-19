@@ -3,15 +3,47 @@
 SetWorkingDir %A_ScriptDir%
 SetBatchLines -1
 DetectHiddenWindows, On
-; Регаем поиск в чит энжин
-; H‹ЛяP„АtTH‹
-; Поиск текста +Кодировочка
+/*
+engine.dll - sv_cheats bypass
+0x74, 0x00, 0xE8, 0x00, 0x00, 0x00, 0x00, 0x84, 0xC0, 0x75, 0x00, 0xE8
+    BYTE Replace[] = { 0xEB };
+    if (revert) {
+        Globals::sv_cheats_pattern[0] = { 0xEB };
+        Replace[0] = 0x74;
 
-; 48 8B CB FF 50 18 84 C0 74 54 48 8B
-; Искать масив байт
+Искать: 74 ?? E8 ?? ?? ?? ?? 84 C0 75 ?? E8
+Заменить 74 на EB
 
-; 48 8B CB FF 50 18 84 C0 EB 54 48 8B
-; Заменить на
+
+
+
+IDA
+Shift + F12
+"SV: Cheat command '%s' ignored.\n"
+Открыть
+Нажать "X" и "Space"
+А что дальше я не ебу...
+
+
+Примерный адресс: 00170728
+До:
+loc_18017131E:
+mov     edx, 4000h
+call    r8
+test    al, al
+jz      short loc_1801713A0
+После:
+loc_18017131E:
+mov     edx, 4000h
+call    r8
+test    al, al
+jmp     short loc_1801713A0
+
+
+
+
+
+*/
 #include %A_ScriptDir%\classMemory.ahk
 if (_ClassMemory.__Class != "_ClassMemory")
 ExitApp
@@ -31,9 +63,11 @@ If !(A_IsAdmin || RegExMatch(CommandLine, " /restart(?!\S)")) {
 IniRead, VarPID, %A_ScriptDir%\data.ini, Data, VarPID
 IniWrite, 0, %A_ScriptDir%\data.ini, Data, VarPID
 
-	aPattern := [0x48, 0x8B, 0xCB, 0xFF, 0x50, 0x18, 0x84, 0xC0, 0x74, 0x54, 0x48, 0x8B]
+	; aPattern := [0x48, 0x8B, 0xCB, 0xFF, 0x50, 0x18, 0x84, 0xC0, 0x74, 0x54, 0x48, 0x8B]
+	aPattern := [0x74, "?", 0xE8, "?", "?", "?", "?", 0x84, 0xC0, 0x75, "?", 0xE8]
 
-	bPattern := [0x48, 0x8B, 0xCB, 0xFF, 0x50, 0x18, 0x84, 0xC0, 0xEB, 0x54, 0x48, 0x8B]
+	; bPattern := [0x48, 0x8B, 0xCB, 0xFF, 0x50, 0x18, 0x84, 0xC0, 0xEB, 0x54, 0x48, 0x8B]
+	bPattern := [0xEB]
 
 mem1337 := new _ClassMemory("ahk_pid "VarPID)
 address := mem1337.processPatternScan(,, aPattern*)
